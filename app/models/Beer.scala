@@ -1,12 +1,6 @@
 package models
 
-/**
- * Created with IntelliJ IDEA.
- * User: urballex
- * Date: 2013-05-09
- * Time: 23:05
- * To change this template use File | Settings | File Templates.
- */
+
 case class Beer (id:Long,name:String,sort:String,description:String,country:String,region:String)
       object Beer{
         var beers = Set(
@@ -17,7 +11,3 @@ case class Beer (id:Long,name:String,sort:String,description:String,country:Stri
         def findAll = this.beers.toList.sortBy(_.id)
         def findById(id:Long) = this.beers.find(_.id == id)
       }
- case class Brewery(id:Long,name:String,country:String,region:String,beers:Set)
-     object breweries {
-       var breweries = Set(Brewery)
-     }
